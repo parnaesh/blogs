@@ -47,13 +47,13 @@ def new_post():
             if x=='':
                 return True
         if empty(title) :
-            title_error='please fill title' 
+             title_error='please fill title' 
         if empty(blog):
             body_error='please fill body'   
         if not title_error and not body_error: 
            return redirect('/individual_blog?id=' + str(post.id))
         else:
-            render_template('newpost.html',title=title,title_error=title_error,blog=blog,body_error=body_error)
+            return render_template('newpost.html',title=title,title_error=title_error,blog=blog,body_error=body_error)
     
     else:
         return render_template('newpost.html')
