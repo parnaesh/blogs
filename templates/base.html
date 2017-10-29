@@ -1,16 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <header>
-        <a href={{ url_for('main_page') }}>Main Blog Page</a>
-        <a href={{ url_for('new_post') }}>Add a Blog Entry</a> 
-    </header>
     <head>
         <title>{{title}}</title>
+        
     </head>
-<body>
+    <body>
+        <header>
+            <div>
+                <table>
+                    <tr>
+                        <td> <a href= '/blog'> Home </a> </td>
+                        <td> <a href= '/UserPage'> Users </a> </td>
+                        <td> <a href= '/add'> Add a blog post </a> </td>
+                        <td> <a href= '/login'> Login </a> </td>
+                        <td> <a href= '/logout'> Logout </a> </td>
+                        <td> <a href= '/register'> Register </a> </td> 
+                    </tr>
+                </table>
+            </div>
+        </header>
+        <br>
+        <main>
 
-    {% block content %}
-    {% endblock %}
+            {% block content %}
 
-</body>
+            {% endblock %}
+
+        </main>
+        <br>
+        
+    </body>
 </html>
