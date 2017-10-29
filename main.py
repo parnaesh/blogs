@@ -121,7 +121,7 @@ def UserPosts():
             title= user+"'s posts", blogs= user_posts)
 
     user_list = User.query.all()
-    return render_template("AllUsers.html", title= "All Users",
+    return render_template("index.html", title= "All Users",
         welcome= welcome, user_list= user_list)
 
 
